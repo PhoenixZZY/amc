@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="amc" extends="struts-default">
+		<!-- 此处的class的内容要与Spring配置文件中的bean的id相同 -->
+		<action name="login" class="loginAction">
+			<result name="success">/index.jsp</result>
+			<result name="input">/login.jsp</result>
+		</action>
+
+		<action name="listUser" class="UserAction" method="list">
+			<result name="success">/user/userList.jsp</result>
+		</action>
+		<action name="addUser" class="UserAction" method="add">
+			<result name="success"  type="redirect">listUser.action</result>
+		</action>
+		<action name="deleteUser" class="UserAction" method="delete">
+			<result name="success" type="redirect">listUser.action</result>
+		</action>
+		 <action name="updatePUser" class="UserAction" method="updateP">  
+            <result name="success">/user/updateUser.jsp</result>  
+        </action>  
+        <action name="updateUser" class="UserAction" method="update">  
+            <result name="success" type="redirect">listUser.action</result>  
+        </action> 
+	</package>
+</struts>

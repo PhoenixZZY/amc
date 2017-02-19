@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-1-17 13:52:54 by Hibernate Tools 5.2.0.CR1 -->
+<hibernate-mapping>
+    <class name="buaa.sem.amc.entity.ReceivableDetail" table="receivableDetail" catalog="amc" optimistic-lock="version">
+        <id name="receiveDetailId" type="java.lang.Integer">
+            <column name="receiveDetailID" />
+            <generator class="identity" />
+        </id>
+        <property name="receivableId" type="java.lang.Integer">
+            <column name="receivableID" />
+        </property>
+        <property name="productId" type="java.lang.Integer">
+            <column name="productID" />
+        </property>
+        <property name="productName" type="string">
+            <column name="productName" length="50" />
+        </property>
+        <property name="salePrice" type="java.lang.Double">
+            <column name="salePrice" precision="22" scale="0" />
+        </property>
+        <property name="saleAmount" type="java.lang.Integer">
+            <column name="saleAmount" />
+        </property>
+        <property name="totalAccount" type="java.lang.Double">
+            <column name="totalAccount" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-1-17 13:52:54 by Hibernate Tools 5.2.0.CR1 -->
+<hibernate-mapping>
+    <class name="buaa.sem.amc.entity.OrderDetail" table="orderDetail" catalog="amc" optimistic-lock="version">
+        <id name="orderDetailId" type="java.lang.Integer">
+            <column name="orderDetailID" />
+            <generator class="identity" />
+        </id>
+        <property name="orderId" type="java.lang.Integer">
+            <column name="orderID" />
+        </property>
+        <property name="productId" type="java.lang.Integer">
+            <column name="productID" />
+        </property>
+        <property name="demand" type="java.lang.Integer">
+            <column name="demand" />
+        </property>
+    </class>
+</hibernate-mapping>

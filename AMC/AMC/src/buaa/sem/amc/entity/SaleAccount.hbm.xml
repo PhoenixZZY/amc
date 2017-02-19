@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-1-17 13:52:54 by Hibernate Tools 5.2.0.CR1 -->
+<hibernate-mapping>
+    <class name="buaa.sem.amc.entity.SaleAccount" table="saleAccount" catalog="amc" optimistic-lock="version">
+        <id name="saleAccountlId" type="java.lang.Integer">
+            <column name="saleAccountlID" />
+            <generator class="identity" />
+        </id>
+        <property name="receivableId" type="java.lang.Integer">
+            <column name="receivableID" />
+        </property>
+        <property name="receiveDate" type="timestamp">
+            <column name="receiveDate" length="19" />
+        </property>
+        <property name="totalAccount" type="java.lang.Double">
+            <column name="totalAccount" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

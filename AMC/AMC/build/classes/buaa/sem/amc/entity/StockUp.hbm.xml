@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-1-17 13:52:54 by Hibernate Tools 5.2.0.CR1 -->
+<hibernate-mapping>
+    <class name="buaa.sem.amc.entity.StockUp" table="stockUp" catalog="amc" optimistic-lock="version">
+        <id name="stockUpId" type="java.lang.Integer">
+            <column name="stockUpID" />
+            <generator class="identity" />
+        </id>
+        <property name="orderId" type="java.lang.Integer">
+            <column name="orderID" />
+        </property>
+        <property name="userId" type="java.lang.Integer">
+            <column name="userID" />
+        </property>
+        <property name="addTime" type="timestamp">
+            <column name="addTime" length="19" />
+        </property>
+        <property name="state" type="string">
+            <column name="state" length="30" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-1-17 13:52:54 by Hibernate Tools 5.2.0.CR1 -->
+<hibernate-mapping>
+    <class name="buaa.sem.amc.entity.PurchaseDetail" table="purchaseDetail" catalog="amc" optimistic-lock="version">
+        <id name="purchaseDetailId" type="java.lang.Integer">
+            <column name="purchaseDetailID" />
+            <generator class="identity" />
+        </id>
+        <property name="purchaseId" type="java.lang.Integer">
+            <column name="purchaseID" />
+        </property>
+        <property name="productId" type="java.lang.Integer">
+            <column name="productID" />
+        </property>
+        <property name="purchaseAmount" type="java.lang.Integer">
+            <column name="purchaseAmount" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-1-17 13:52:54 by Hibernate Tools 5.2.0.CR1 -->
+<hibernate-mapping>
+    <class name="buaa.sem.amc.entity.Product" table="product" catalog="amc" optimistic-lock="version">
+        <id name="productId" type="java.lang.Integer">
+            <column name="productID" />
+            <generator class="identity" />
+        </id>
+        <property name="productName" type="string">
+            <column name="productName" length="50" not-null="true" />
+        </property>
+        <property name="productSize" type="string">
+            <column name="productSize" length="20" not-null="true" />
+        </property>
+        <property name="salePrice" type="double">
+            <column name="salePrice" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="stock" type="int">
+            <column name="stock" not-null="true" />
+        </property>
+        <property name="safeStock" type="int">
+            <column name="safeStock" not-null="true" />
+        </property>
+        <property name="supplierId" type="int">
+            <column name="supplierID" not-null="true" />
+        </property>
+        <property name="purchasePrice" type="java.lang.Double">
+            <column name="purchasePrice" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>
